@@ -1,1 +1,205 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>氏名 Your Name</title>
+  <meta name="description" content="早稲田大学大学院 渡辺研究室 修士課程．点群からの曲面再構成の研究をしています．">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@500&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+  <!-- ===== 上部ナビ（スクロールしても上に残る） ===== -->
+  <nav class="topnav">
+    <a href="#about">About</a>
+    <a href="#news">News</a>
+    <a href="#research">Research</a>
+    <a href="#publications">Publications</a>
+    <a href="#awards">Awards</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main class="container">
+
+    <!-- ===== ヘッダー ===== -->
+    <header class="hero" id="about">
+      <!-- TODO: assets/profile.jpg に顔写真を置く -->
+      <img class="avatar" src="assets/profile.jpg" alt="プロフィール写真">
+      <div class="hero-text">
+        <h1>
+          <span class="name-ja">氏名</span>
+          <span class="name-en">Your Name</span>
+        </h1>
+        <p class="affiliation">
+          早稲田大学大学院 基幹理工学研究科 情報理工・情報通信専攻 修士1年<br>
+          <span class="sub">M1, Dept. of Computer Science and Communications Engineering, Waseda University</span>
+        </p>
+        <ul class="links">
+          <!-- TODO: 各URLを自分のものに差し替え．使わないものは行ごと削除 -->
+          <li><a href="https://github.com/USERNAME">GitHub</a></li>
+          <li><a href="https://scholar.google.com/citations?user=XXXX">Google Scholar</a></li>
+          <li><a href="https://www.linkedin.com/in/XXXX">LinkedIn</a></li>
+          <li><a href="assets/cv.pdf">CV</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <section class="intro">
+      <p>
+        <a href="https://www.ams.giti.waseda.ac.jp/">早稲田大学 渡辺研究室（オーディオビジュアル情報処理研究室）</a>で，
+        渡辺裕教授の指導のもと，点群から物体の表面形状を復元する研究に取り組んでいます．
+      </p>
+      <p class="en">
+        I am a master's student at Waseda University, supervised by Prof. Hiroshi Watanabe.
+        My research focuses on surface reconstruction from point clouds.
+      </p>
+    </section>
+
+    <!-- ===== News ===== -->
+    <section id="news">
+      <h2 class="section-title">
+        <span class="num">01</span>
+        <span class="en">News</span>
+        <span class="ja">お知らせ</span>
+      </h2>
+      <ul class="news">
+        <!-- TODO: 日付と受賞名を公式表記で確認 -->
+        <li><time>2026.10</time><span>IEEE GCCE 2026 にて Excellent Paper Award（Outstanding Prize）を受賞しました．</span></li>
+        <li><time>2026.04</time><span>早稲田大学大学院 基幹理工学研究科 修士課程に進学しました．</span></li>
+      </ul>
+    </section>
+
+    <!-- ===== Research ===== -->
+    <section id="research">
+      <h2 class="section-title">
+        <span class="num">02</span>
+        <span class="en">Research</span>
+        <span class="ja">研究内容</span>
+      </h2>
+      <p>
+        3Dスキャナなどで得られる点の集まり（点群）から，なめらかな物体表面を復元する手法を研究しています．
+        特に，表面までの距離を表す関数（符号なし距離場，UDF）を用いた手法において，
+        各点の周辺をどの範囲まで見るか（局所領域の大きさ）を適切に決める方法に取り組んでいます．
+      </p>
+      <ul class="tags">
+        <li>Point Cloud</li>
+        <li>Surface Reconstruction</li>
+        <li>Unsigned Distance Field</li>
+        <li>3D Vision</li>
+      </ul>
+      <!-- TODO: 結果の図やGIFを置く場合 -->
+      <!-- <figure><img src="assets/research.gif" alt="再構成結果の例"><figcaption>再構成結果の例</figcaption></figure> -->
+    </section>
+
+    <!-- ===== Publications ===== -->
+    <section id="publications">
+      <h2 class="section-title">
+        <span class="num">03</span>
+        <span class="en">Publications</span>
+        <span class="ja">論文</span>
+      </h2>
+
+      <h3>国際会議 / International Conferences</h3>
+      <ul class="pubs">
+        <!-- TODO: 受賞論文のタイトルと著者を記入（自分の名前は <strong> で太字に） -->
+        <li>
+          <strong>Your Name</strong>, Co-author, Hiroshi Watanabe.
+          <span class="title">Paper Title Here</span>
+          <span class="venue">IEEE GCCE 2026</span>
+          <span class="badge award">Excellent Paper Award</span>
+          <a class="badge" href="#">paper</a>
+        </li>
+      </ul>
+
+      <h3>国内会議 / Domestic Conferences</h3>
+      <ul class="pubs">
+        <!-- TODO: 自分の論文であれば記入（例：PCSJ/IMPS 2025 の点群メッシュ生成の論文） -->
+        <li>
+          <strong>Your Name</strong>, Co-author, Hiroshi Watanabe.
+          <span class="title">Paper Title Here</span>
+          <span class="venue">PCSJ/IMPS 2025</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ===== Awards ===== -->
+    <section id="awards">
+      <h2 class="section-title">
+        <span class="num">04</span>
+        <span class="en">Awards</span>
+        <span class="ja">受賞</span>
+      </h2>
+      <ul class="timeline">
+        <li><time>2026</time><span>IEEE GCCE 2026 Excellent Paper Award（Outstanding Prize）</span></li>
+      </ul>
+    </section>
+
+    <!-- ===== Education ===== -->
+    <section id="education">
+      <h2 class="section-title">
+        <span class="num">05</span>
+        <span class="en">Education</span>
+        <span class="ja">学歴</span>
+      </h2>
+      <ul class="timeline">
+        <li>
+          <time>2026.04 –<br>2028.03（見込み）</time>
+          <span>
+            早稲田大学大学院 基幹理工学研究科 情報理工・情報通信専攻 修士課程<br>
+            <span class="sub">M.Eng., Waseda University — Supervisor: Prof. Hiroshi Watanabe</span>
+          </span>
+        </li>
+        <li>
+          <time>– 2026.03</time>
+          <span>
+            早稲田大学 基幹理工学部 情報通信学科<br>
+            <span class="sub">B.Eng., Waseda University</span>
+          </span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ===== Skills ===== -->
+    <section id="skills">
+      <h2 class="section-title">
+        <span class="num">06</span>
+        <span class="en">Skills</span>
+        <span class="ja">技術・資格</span>
+      </h2>
+      <dl class="skills">
+        <!-- TODO: 実際に使っているものに合わせて編集 -->
+        <dt>プログラミング言語 / Languages</dt>
+        <dd>Python, C, C++</dd>
+        <dt>フレームワーク / Frameworks</dt>
+        <dd>PyTorch, Open3D, OpenCV</dd>
+        <dt>資格 / Certifications</dt>
+        <dd>応用情報技術者試験 合格（Applied Information Technology Engineer Examination）</dd>
+        <dt>語学 / Languages</dt>
+        <dd>日本語（ネイティブ），英語（TOEIC L&amp;R 870）</dd>
+      </dl>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section id="contact">
+      <h2 class="section-title">
+        <span class="num">07</span>
+        <span class="en">Contact</span>
+        <span class="ja">連絡先</span>
+      </h2>
+      <!-- TODO: メールアドレスを記入（スパム対策で [at] 表記） -->
+      <p class="mono">yourname [at] example.waseda.jp</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Your Name</p>
+  </footer>
+
+</body>
+</html>
