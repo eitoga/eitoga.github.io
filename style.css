@@ -1,11 +1,13 @@
 /* ===== 色やサイズの設定（ここを変えると全体が変わる） ===== */
 :root {
-  --bg: #fbfbf9;
-  --text: #1f2328;
-  --muted: #6b7280;
-  --line: #e5e7eb;
-  --accent: #2f6f8f;        /* 見出し番号・リンクの色 */
-  --accent-soft: #e6f0f4;
+  --bg: #f8fbfa;
+  --text: #1f2a28;
+  --muted: #667a75;
+  --line: #dbe7e3;
+  --accent: #4a8a7c;          /* リンクの色 */
+  --accent-soft: #e4f0ed;
+  --heading-bg: #a5c9c1;      /* 見出しラベルの背景 */
+  --heading-text: #1f3d36;    /* 見出しラベルの文字 */
   --award: #a36a00;
   --award-soft: #fbf1dc;
   --max-width: 760px;
@@ -13,12 +15,14 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #15171a;
-    --text: #e6e6e6;
-    --muted: #9aa0a6;
-    --line: #2c3036;
-    --accent: #7fb8d4;
-    --accent-soft: #1e2a31;
+    --bg: #141a19;
+    --text: #e3ebe8;
+    --muted: #9bb0aa;
+    --line: #2a3633;
+    --accent: #8cc3b6;
+    --accent-soft: #1d2a27;
+    --heading-bg: #3d6b61;
+    --heading-text: #eef6f3;
     --award: #e0b45c;
     --award-soft: #2c2516;
   }
@@ -110,42 +114,20 @@ a:hover { text-decoration: underline; }
 .intro p { margin: 0 0 8px; }
 .intro .en { color: var(--muted); font-size: 0.93rem; }
 
-/* ===== セクション見出し（番号＋英語＋日本語） ===== */
+/* ===== セクション見出し（右だけ丸いラベル） ===== */
 section { margin-top: 56px; }
 
 .section-title {
-  display: flex;
-  align-items: baseline;
-  gap: 12px;
+  display: inline-block;
   margin: 0 0 20px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid var(--line);
-  position: relative;
-}
-/* 下線の左側だけアクセント色にする */
-.section-title::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -1px;
-  width: 48px;
-  height: 2px;
-  background: var(--accent);
-}
-.section-title .num {
-  font-family: "JetBrains Mono", monospace;
-  font-size: 0.85rem;
-  color: var(--accent);
-}
-.section-title .en {
-  font-size: 1.5rem;
+  padding: .5em 1.6em .5em 1em;
+  background-color: var(--heading-bg);
+  color: var(--heading-text);
+  border-radius: 0 99px 99px 0;
+  font-size: 1.25rem;
   font-weight: 700;
-  letter-spacing: 0.02em;
-}
-.section-title .ja {
-  font-size: 0.85rem;
-  color: var(--muted);
-  font-weight: 500;
+  letter-spacing: 0.03em;
+  line-height: 1.4;
 }
 
 h3 {
@@ -234,6 +216,6 @@ footer {
   .hero { flex-direction: column; text-align: center; padding-top: 40px; }
   .links { justify-content: center; }
   .news li, .timeline li { grid-template-columns: 1fr; gap: 0; }
-  .section-title .en { font-size: 1.3rem; }
+  .section-title { font-size: 1.15rem; }
   .topnav { gap: 12px; font-size: 0.78rem; }
 }
