@@ -1,6 +1,6 @@
 /* ===== 色やサイズの設定（ここを変えると全体が変わる） ===== */
 :root {
-  --bg: #f8fbfa;
+  --bg: #ffffff;
   --text: #1f2a28;
   --muted: #667a75;
   --line: #dbe7e3;
@@ -118,16 +118,19 @@ a:hover { text-decoration: underline; }
 section { margin-top: 56px; }
 
 .section-title {
-  display: inline-block;
   margin: 0 0 20px;
-  padding: .5em 1.6em .5em 1em;
-  background-color: var(--heading-bg);
-  color: var(--heading-text);
-  border-radius: 0 99px 99px 0;
+  border-bottom: 2px solid var(--heading-bg);
   font-size: 1.25rem;
   font-weight: 700;
   letter-spacing: 0.03em;
   line-height: 1.4;
+}
+.section-title .en {
+  display: inline-block;
+  padding: .5em 1.6em .5em 1em;
+  background-color: var(--heading-bg);
+  color: var(--heading-text);
+  border-radius: 0 99px 0 0;
 }
 
 h3 {
@@ -151,10 +154,11 @@ h3 {
 }
 .news li + li, .timeline li + li { border-top: 1px dashed var(--line); }
 time {
-  font-family: "JetBrains Mono", monospace;
-  font-size: 0.82rem;
+  font-family: inherit;
+  font-variant-numeric: tabular-nums;
+  font-size: 0.88rem;
   color: var(--muted);
-  padding-top: 3px;
+  padding-top: 2px;
   line-height: 1.6;
 }
 
